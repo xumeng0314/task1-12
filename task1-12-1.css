@@ -1,0 +1,30 @@
+#container{
+    width: 220px;
+    height: 300px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+table{
+    width: 220px;
+}
+table td{
+    height: 20px;
+    font-weight: bold;
+}
+thead td{
+    background-color: #000000;
+    color: #ffffff;
+}
+tbody tr:nth-child(even) td{   /* 规定属于tr这个父元素的偶数行的子元素td的属性 */
+    background-color: #eeeeee;
+}
+tbody tr:nth-child(1) td{
+    color: red;
+}
+tbody tr:nth-child(2) td{
+    color: red;
+}
+tbody tr:nth-child(3) td{
+    color: red;
+}

@@ -1,0 +1,67 @@
+#banner{
+    position: relative; /* 父盒子进行相对定位 */
+    width: 220px;
+    height: 100px;
+    margin: 0 auto;
+    background-color:green;
+    overflow: hidden;
+}
+#slider_1,#slider_2{
+    position: absolute;  /* div的绝对定位以父盒子为参考物 */
+    width: 220px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    animation: slider-out 4s linear infinite;
+}
+#slider_1{
+    background-color: blue;
+}
+#slider_2{
+    background-color: blueviolet;
+}
+
+.buttons{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    left: 120px;
+    top: 70px;
+    z-index: 99;
+}
+.button{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 5px;
+    text-align: center;
+    background-color: rgba(236, 245, 236, 0.3);
+}
+.button a{
+    text-decoration: none;
+    color: #ffffff;
+}
+:target{
+    left: 0%;
+    animation: slider-in 4s linear infinite;
+}
+
+@keyframes slider-out{
+    0%{
+        left: 0%;
+    }
+    100%{
+        left: -100%;
+    }
+}
+@keyframes slider-in{
+    0%{
+        left: 100%;
+    }
+    100%{
+        left: 0% ;
+    }
+}
